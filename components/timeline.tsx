@@ -65,7 +65,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     year: "2019 – 2021",
-    title: "Marketing Manager at Strasser Capital",
+    title: "Marketing Manager at S. Capital",
     description:
       "Led online marketing strategies and executed lead generation campaigns for sectors such as solar energy, hospitality, and real estate in Munich. This role sharpened my skills in campaign development and digital strategy.",
     technologies: ["Wordpress", "CRM Systems"],
