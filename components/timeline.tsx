@@ -41,8 +41,8 @@ const timelineData: TimelineItem[] = [
     title: "E-commerce Ventures",
     description:
       "Built and scaled multiple online stores on platforms like Shopify and eBay, spanning niches such as jewelry, fashion, supplements, and digital products. Gained invaluable insights into performance marketing and customer engagement.",
-    technologies: ["Shopify", "Meta Ads"],
-    tags: ["E-commerce", "Digital Marketing"],
+    technologies: ["Shopify", "Meta Ads", "Google Ads"],
+    tags: ["E-commerce", "Performance Marketing"],
     icon: <ShoppingBag className="h-8 w-8 text-primary" />
   },
   {
@@ -50,8 +50,8 @@ const timelineData: TimelineItem[] = [
     title: "Wholesale & Foreign Trade Merchant at 1&1",
     description:
       "During my apprenticeship at 1&1, a leading German telecommunications company, I set up Meta ad campaigns and created engaging visuals and copy. I also managed returns and coordinated various logistical tasks, gaining hands-on experience in digital marketing, project coordination, and trade operations.",
-    technologies: ["Meta Ads", "CRM Systems", "Microsoft Office"],
-    tags: ["Digital Marketing", "Ad Campaigns", "Creative Copy", "Trade Operations", "Logistics"],
+    technologies: ["Meta Ads", "CRM Systems", "Microsoft Office", "Google Ads"],
+    tags: ["Digital Marketing", "Ad Campaigns", "Creative Copy", "Trade Operations", "Logistics", "SEO"],
     icon: <GraduationCap className="h-8 w-8 text-primary" />
   },
   {
@@ -68,22 +68,22 @@ const timelineData: TimelineItem[] = [
     title: "Marketing Manager at S. Capital",
     description:
       "Led online marketing strategies and executed lead generation campaigns for sectors such as solar energy, hospitality, and real estate in Munich. This role sharpened my skills in campaign development and digital strategy.",
-    technologies: ["Wordpress", "CRM Systems"],
-    tags: ["Marketing", "Lead Gen"],
+    technologies: ["Wordpress", "CRM Systems", "Meta Ads", "Google Ads"],
+    tags: ["Marketing", "Lead Gen", "SEO"],
     icon: <BarChart className="h-8 w-8 text-primary" />
   },
   {
     year: "2021 – 2022",
-    title: "Business Development Representative at Oracle",
+    title: "Business Development Representative for Oracle DBA",
     description:
-      "Managed outbound lead generation in the DACH region, refining my sales techniques and integrating technical insights with effective communication.",
+      "Managed outbound lead generation for Oracle Database Appliances in the DACH region, refining my sales and prospecting techniques and integrating technical insights with effective communication.",
     technologies: ["CRM Systems", "Sales Automation Tools"],
     tags: ["Sales", "Business Development", "Lead Gen"],
     icon: <PhoneIcon className="h-8 w-8 text-primary" />
   },
   {
     year: "2021 – 2022",
-    title: "Business Development Representative at Siemens",
+    title: "Business Development Representative for Siemens GTS",
     description:
       "Engaged in outbound lead generation for Siemens Global Translation Services, further solidifying my expertise in large-scale business development.",
     technologies: ["CRM Systems", "Sales Automation Tools"],

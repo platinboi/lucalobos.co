@@ -52,7 +52,7 @@ const coreValues: CoreValue[] = [
 const achievements: Achievement[] = [
   {
     title: "Bootstrapped SaaS Success",
-    description: "In my very first software venture, just two people (myself and one developer) built a product that secured 86 paying customers within the first month, reaching a six figure valuation in just 6 months. No external funding, no big marketing spend—just pure execution and relentless drive."
+    description: "In my very first software venture, just two people (myself and one developer) built a product that secured 86 paying customers within the first month, reaching a six figure valuation in just 4 months. No external funding, no big marketing spend—just pure execution and relentless drive."
   },
   {
     title: "E-Commerce Profitability With Zero Ad Spend",
@@ -85,7 +85,7 @@ export default function CoreValues() {
         className="space-y-4 md:space-y-5 mb-10 md:mb-16 text-center mx-auto px-4 sm:px-6 lg:px-8"
       >
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground">
-          Core Values <span className="text-primary">&</span> Milestones
+          Core Values <span className="text-primary">&</span> Achievements
         </h2>
         <p className="text-secondary text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
           The principles that guide my work and the achievements that define my journey.
