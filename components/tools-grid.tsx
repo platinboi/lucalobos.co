@@ -67,22 +67,23 @@ const tools: Tool[] = [
 
 export default function ToolsGrid() {
   return (
-    <section id="tools" className="py-12">
+    <section id="tools" className="py-20 lg:py-32">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="space-y-5 mb-14 text-center mx-auto px-4 sm:px-6 lg:px-8"
+        className="space-y-5 mb-16 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">My Staple Toolbox</h2>
-        <p className="text-secondary text-lg md:text-xl max-w-3xl mx-auto">
+        <h2 className="text-editorial-title font-serif font-light text-foreground">My Staple Toolbox</h2>
+        <p className="text-editorial-body text-secondary max-w-3xl mx-auto">
           A carefully curated collection of cutting-edge tools that enable me to deliver exceptional results. These
-          aren't just tools—they're extensions of my creative and technical capabilities.
+          aren't just tools-they're extensions of my creative and technical capabilities.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {tools.map((tool, index) => (
           <motion.div
             key={index}
@@ -92,15 +93,16 @@ export default function ToolsGrid() {
             viewport={{ once: true }}
             className="tool-card"
           >
-            <Card className="h-full border border-border shadow-none hover:border-primary/20 hover:bg-card/80 transition-all duration-300 rounded-3xl overflow-hidden">
+            <Card className="h-full border border-border shadow-none hover:border-primary/20 hover:bg-card/80 transition-all duration-300 rounded-2xl overflow-hidden">
               <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="mb-4 p-3 rounded-full bg-background text-foreground shadow-sm border border-muted/50">{tool.icon}</div>
-                <h3 className="font-medium text-xl md:text-2xl mb-3 text-foreground">{tool.name}</h3>
+                <h3 className="font-serif font-normal text-xl md:text-2xl mb-3 text-foreground">{tool.name}</h3>
                 <p className="text-sm md:text-base text-secondary">{tool.description}</p>
               </CardContent>
             </Card>
           </motion.div>
         ))}
+        </div>
       </div>
       
       <motion.p

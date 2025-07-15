@@ -4,7 +4,6 @@ import Timeline from "@/components/timeline"
 import ToolsGrid from "@/components/tools-grid"
 import FeaturedProjects from "@/components/featured-projects"
 import ContactForm from "@/components/contact-form"
-import InitialLoader from "@/components/initial-loader"
 import CoreValues from "@/components/core-values"
 
 export const metadata: Metadata = {
@@ -16,8 +15,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <InitialLoader />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-20">
+      <div className="space-y-0">
         <Hero />
         <Timeline />
         <FeaturedProjects />

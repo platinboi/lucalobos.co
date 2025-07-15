@@ -7,7 +7,6 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Check, Send, AlertCircle } from "lucide-react"
 
@@ -103,28 +102,28 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-12">
+    <section id="contact" className="py-20 lg:py-32">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="space-y-5 mb-14 text-center mx-auto px-4 sm:px-6 lg:px-8"
+        className="space-y-5 mb-16 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">Let's Build Together</h2>
-        <p className="text-secondary text-lg md:text-xl max-w-3xl mx-auto">
+        <h2 className="text-editorial-title font-serif font-light text-foreground">Let's Build Together</h2>
+        <p className="text-editorial-body text-secondary max-w-3xl mx-auto">
           Ready to automate your business processes or build something amazing? Drop me a line and let's discuss how we
           can make your digital dreams a reality. I promise I don't bite.
         </p>
       </motion.div>
 
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-background/90 backdrop-blur-sm border border-muted rounded-3xl shadow-md p-8 md:p-10 relative overflow-hidden"
+          className="bg-background/90 backdrop-blur-sm border border-border rounded-2xl shadow-sm p-8 md:p-10 relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent dark:from-primary/[0.05] pointer-events-none" aria-hidden="true"></div>
           <div className="relative z-10">
@@ -133,7 +132,7 @@ export default function ContactForm() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                   <Check className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-foreground">Message Sent!</h3>
+                <h3 className="text-2xl font-serif font-normal mb-2 text-foreground">Message Sent!</h3>
                 <p className="text-secondary mb-4">
                   Thanks for reaching out. I'll get back to you faster than you can say "the singularity is close."
                 </p>
@@ -151,21 +150,20 @@ export default function ContactForm() {
                 )}
                 
                 <div className="space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-foreground text-sm font-medium block mb-2">Name</Label>
+                  <div className="relative">
+                    <div className="text-foreground text-sm font-medium block mb-2">Name</div>
                     <Input
                       id="name"
                       name="name"
                       placeholder="Your name"
                       value={formState.name}
                       onChange={handleChange}
-                      required
-                      className="focus-visible:ring-primary/70 transition-all duration-200"
+                      className="focus-visible:ring-primary/70 transition-all duration-200 w-full"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-foreground text-sm font-medium block mb-2">Email</Label>
+                    <label htmlFor="email" className="text-foreground text-sm font-medium block mb-2">Email</label>
                     <Input
                       id="email"
                       name="email"
@@ -179,37 +177,37 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <Label className="text-foreground text-sm font-medium block mb-3">What are you interested in?</Label>
+                    <label className="text-foreground text-sm font-medium block mb-3">What are you interested in?</label>
                     <RadioGroup value={formState.interest} onValueChange={handleRadioChange} className="mt-2 space-y-3">
                       <div className="flex items-center space-x-3">
                         <RadioGroupItem value="ai-automation" id="ai-automation" className="border-muted text-primary focus:ring-primary/70" />
-                        <Label htmlFor="ai-automation" className="cursor-pointer text-foreground">
+                        <label htmlFor="ai-automation" className="cursor-pointer text-foreground">
                           AI & Business Automation
-                        </Label>
+                        </label>
                       </div>
                       <div className="flex items-center space-x-3">
                         <RadioGroupItem value="custom-development" id="custom-development" className="border-muted text-primary focus:ring-primary/70" />
-                        <Label htmlFor="custom-development" className="cursor-pointer text-foreground">
+                        <label htmlFor="custom-development" className="cursor-pointer text-foreground">
                           Custom App Development
-                        </Label>
+                        </label>
                       </div>
                       <div className="flex items-center space-x-3">
                         <RadioGroupItem value="web-development" id="web-development" className="border-muted text-primary focus:ring-primary/70" />
-                        <Label htmlFor="web-development" className="cursor-pointer text-foreground">
+                        <label htmlFor="web-development" className="cursor-pointer text-foreground">
                           Web Development
-                        </Label>
+                        </label>
                       </div>
                       <div className="flex items-center space-x-3">
                         <RadioGroupItem value="lead-generation" id="lead-generation" className="border-muted text-primary focus:ring-primary/70" />
-                        <Label htmlFor="lead-generation" className="cursor-pointer text-foreground">
+                        <label htmlFor="lead-generation" className="cursor-pointer text-foreground">
                           Lead Generation
-                        </Label>
+                        </label>
                       </div>
                     </RadioGroup>
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-foreground text-sm font-medium block mb-2">Message</Label>
+                    <label htmlFor="message" className="text-foreground text-sm font-medium block mb-2">Message</label>
                     <Textarea
                       id="message"
                       name="message"
@@ -225,7 +223,7 @@ export default function ContactForm() {
                 <div className="mt-8">
                   <Button
                     type="submit"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 text-base font-medium shadow-md transition-all duration-200 hover:shadow-lg hover:scale-[1.01] flex items-center justify-center"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-4 text-base font-medium shadow-sm transition-all duration-200 hover:shadow-md flex items-center justify-center"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

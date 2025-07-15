@@ -38,21 +38,36 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex space-x-8">
-              <Link href="#experience" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <button 
+                onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
                 Experience
-              </Link>
-              <Link href="#projects" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
                 Projects
-              </Link>
-              <Link href="#tools" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
                 Tools
-              </Link>
-              <Link href="#values" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => document.getElementById('values')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
                 Core Values
-              </Link>
-              <Link href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
                 Contact
-              </Link>
+              </button>
             </nav>
             <ThemeToggle />
           </div>
@@ -78,41 +93,61 @@ export default function Header() {
             className="md:hidden bg-background/95 dark:bg-background/95 backdrop-blur-md border-t border-border"
           >
             <div className="px-4 py-6 space-y-4">
-              <Link
-                href="#experience"
-                className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)}
+              <button
+                onClick={() => {
+                  setIsOpen(false)
+                  setTimeout(() => {
+                    document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })
+                  }, 100)
+                }}
+                className="block text-lg font-medium text-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Experience
-              </Link>
-              <Link
-                href="#projects"
-                className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)}
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false)
+                  setTimeout(() => {
+                    document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' })
+                  }, 100)
+                }}
+                className="block text-lg font-medium text-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Projects
-              </Link>
-              <Link
-                href="#tools"
-                className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)}
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false)
+                  setTimeout(() => {
+                    document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' })
+                  }, 100)
+                }}
+                className="block text-lg font-medium text-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Tools
-              </Link>
-              <Link
-                href="#values"
-                className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)}
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false)
+                  setTimeout(() => {
+                    document.getElementById('values')?.scrollIntoView({ behavior: 'smooth' })
+                  }, 100)
+                }}
+                className="block text-lg font-medium text-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Core Values
-              </Link>
-              <Link
-                href="#contact"
-                className="block text-lg font-medium text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsOpen(false)}
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false)
+                  setTimeout(() => {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                  }, 100)
+                }}
+                className="block text-lg font-medium text-foreground hover:text-primary transition-colors w-full text-left"
               >
                 Contact
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}

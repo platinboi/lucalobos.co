@@ -1,15 +1,21 @@
-import { Inter } from 'next/font/google'
+import { Inter, Crimson_Pro } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Banner } from '@/components/ui/banner'
 import ScrollHandler from '@/components/scroll-handler'
 import { ThemeProvider } from '@/components/theme-provider'
-import { VoiceAssistantWrapper } from '@/components/voice-assistant-wrapper'
+import InitialLoader from '@/components/initial-loader'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+})
+
+const crimsonPro = Crimson_Pro({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 export const metadata = {
@@ -40,11 +46,6 @@ export const metadata = {
     title: 'Luca Lo Bosco | Full-Stack Developer & AI Solutions',
     description: 'Business Automation Specialist, AI Developer, and Full-Stack Web Developer helping businesses build better digital solutions.',
     creator: '@lucalobosco',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
   },
   robots: {
     index: true,
@@ -90,13 +91,14 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${crimsonPro.variable} font-sans antialiased`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <InitialLoader />
           <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
             <ScrollHandler>
               <Banner 
@@ -104,12 +106,11 @@ export default function RootLayout({
                 variant="rainbow"
                 height="3.5rem"
                 className="font-medium text-base tracking-tight backdrop-blur-sm border-b border-border/10 text-foreground/90 shadow-sm z-50"
-                message="🚀 Can you feel it? This is the start of something new!"
+                message="🚀 The future won't come until we build it!"
               />
               <Header />
               {children}
               <Footer />
-              <VoiceAssistantWrapper />
             </ScrollHandler>
           </div>
         </ThemeProvider>
